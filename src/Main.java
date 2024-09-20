@@ -1,12 +1,16 @@
+import javax.swing.*;
 
 public class Main {
-    public static void main(String[] args) {//TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String[] args) {
 
-        for (int i = 1; i <= 5; i++) {//TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        JFrame frame = new JFrame("Hello swing");
+        JButton button = new JButton("Click me");
+
+        button.addActionListener(e -> JOptionPane.showMessageDialog(null, "Hello, Word!"));
+
+        frame.add(button);
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
         }
     }
-}
